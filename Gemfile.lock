@@ -280,3 +280,6 @@ DEPENDENCIES
   unicorn
   webmock (~> 1.11.0)
   webrat
+
+BUNDLED WITH
+   1.10.3
