@@ -31,6 +31,14 @@ NB_USERS.times do |n|
   end
 end
 
+#Creating users for the purpose of the traininig
+User.create! do |u|
+  u.username = "rafalima";
+  u.email = "rafalima07@gmail.com"
+  u.password = u.password_confirmation = 'password'
+end
+
+
 # Create 300 Orders
 NB_ORDERS = 300
 
