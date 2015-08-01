@@ -20,8 +20,8 @@ end
 
 NB_PRODUCTS = Product.count
 
-# Create 100 users
-NB_USERS = 100
+# Create 5 users
+NB_USERS = 5
 
 NB_USERS.times do |n|
   User.create! do |u|
@@ -39,8 +39,8 @@ User.create! do |u|
 end
 
 
-# Create 300 Orders
-NB_ORDERS = 300
+# Create 15 Orders
+NB_ORDERS = 15
 
 user_ids = User.pluck(:id)
 product_ids = Product.pluck(:id)
