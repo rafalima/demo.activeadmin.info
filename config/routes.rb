@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
+  get "db/seed" => "database#seed"
+
 
   get "cart" => "cart#show"
   get "cart/add/:id" => "cart#add", :as => :add_to_cart
