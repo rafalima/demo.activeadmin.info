@@ -33,20 +33,6 @@ group :development do
   gem 'mechanize','2.7.3'
 end
 
-group :production do
-  gem 'pg'
-  gem 'unicorn'
-
-  # Enable gzip compression on heroku, but don't compress images.
-  gem 'heroku-deflater'
-
-  # Heroku injects it if it's not in there already
-  gem 'rails_12factor'
-
-  gem 'rack-throttle'
-  gem 'rack-cache'
-end
-
 group :development, :test do
   gem 'sqlite3'
   gem 'factory_girl_rails'
