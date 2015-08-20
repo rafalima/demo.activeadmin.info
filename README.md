@@ -37,7 +37,7 @@
 
 <h1>Running the application</h1>
 <ol>
-  <li>Download the code</li>
+  <li>Clone this repo</li>
   <li>Execute "bundle install" on the root of the project to install all dependencies defined in the Gemfile</li>
   <li>Execute "rake db:schema:load" to create the database tables</li>
   <li>Execute "rake db:seed" to populate the database (products and users)</li>
