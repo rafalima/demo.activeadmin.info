@@ -23,7 +23,7 @@
 
 <hr />
 
-<h1>Requirement</h1>
+<h1>Requirements</h1>
 <ol>
   <li>Install <a target="_BLANK" href="https://github.com/sstephenson/rbenv">Rbenv</a></li>
   <li>Install Ruby 2.2.0
