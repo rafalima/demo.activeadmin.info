@@ -7,7 +7,6 @@
       <li><a target="_BLANK" href="https://github.com/sstephenson/rbenv#installing-ruby-versions">unix</a></li>
     </ul>
   </li>
-  <li>PostgreSql</li>
   <li>Instalar o <a target="_BLANK" href="http://bundler.io/">bundler</a></li>
 </ol>
 
