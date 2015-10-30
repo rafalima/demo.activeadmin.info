@@ -9,7 +9,7 @@
           <li>On Gemfile, comment line "ruby '2.2.0'" and uncomment line "ruby '2.1.7'"
         </ul>    
       </li>  
-      <li>Unix
+      <li>Unix - Instalar Ruby 2.2.0
         <ul><li><a target="_BLANK" href="https://github.com/sstephenson/rbenv#installing-ruby-versions">unix</a></li></ul>
       </li>
     </ul>
