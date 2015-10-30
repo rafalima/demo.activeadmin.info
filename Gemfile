@@ -1,8 +1,11 @@
 source 'https://rubygems.org'
 ruby '2.2.0'
+#ruby '2.1.7'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
+
+gem 'tzinfo-data'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
