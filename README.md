@@ -3,10 +3,12 @@
   <li>Instalar <a target="_BLANK" href="https://github.com/sstephenson/rbenv">Rbenv</a></li>
   <li>Instalar Ruby 2.2.0 for unix and Ruby 2.1.7 for Windows
     <ul>
-        <ul>Windows
+      <li>Windows
+        <ul>
           <li><a target="_BLANK" href="http://rubyinstaller.org/">windows installer</a></li>
           <li>On Gemfile, comment line "ruby '2.2.0'" and uncomment line "ruby '2.1.7'"
-        </ul>      
+        </ul>    
+      <li>  
       <li><a target="_BLANK" href="https://github.com/sstephenson/rbenv#installing-ruby-versions">unix</a></li>
     </ul>
   </li>
