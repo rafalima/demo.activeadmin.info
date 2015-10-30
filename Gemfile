@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
+
+#comment this line if using windows
 ruby '2.2.0'
+
+#uncomment this line if using windows
 #ruby '2.1.7'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -50,4 +54,3 @@ group :test do
   gem "webrat"
   gem 'simplecov', :require => false
 end
-
