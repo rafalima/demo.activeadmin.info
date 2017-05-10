@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get "cart" => "cart#show"
   get "cart/add/:id" => "cart#add", :as => :add_to_cart
-  post "cart/remove/:id" => "cart#remove", :as => :remove_from_cart
+  get "cart/remove/:id" => "cart#remove", :as => :remove_from_cart
   post "cart/checkout" => "cart#checkout", :as => :checkout
 
   get 'signup' => 'users#new', :as => :signup
