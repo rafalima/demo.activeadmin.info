@@ -2,22 +2,25 @@
 <html>
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "The Active Admin Store" %></title>
-    <%= stylesheet_link_tag "application" %>
-    <%= javascript_include_tag :defaults %>
-    <%= csrf_meta_tag %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
     <%= yield(:head) %>
   </head>
   <body>
     <div id="container">
 
       <div id="flash_notice">
-        Welcome to the demo application of <a href='http://activeadmin.info'>ActiveAdmin</a>.
+        Welcome to the demo application of <a href='https://activeadmin.info'>ActiveAdmin</a>.
         Go <a href='/admin'>try out the Administration interface</a>!
       </div>
 
       <div id="auth">
         <a href='/admin'>Administration interface</a> |
-        <a href='http://github.com/gregbell/demo.activeadmin.info'>Source Code</a> |
+        <a href='https://github.com/activeadmin/demo.activeadmin.info'>Source Code</a> |
         <% if logged_in? %>
           Welcome <%= current_user.username %>! Not you?
           <%= link_to "Log out", logout_path %>
@@ -26,7 +29,7 @@
           <%= link_to "Log in", login_path %>.
         <% end %>
       </div>
-      
+
       <h1><a href="/">The Active Admin Store</a></h1>
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>

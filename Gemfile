@@ -1,51 +1,55 @@
 source 'https://rubygems.org'
-ruby '2.3.1'
+ruby '>= 2.2.2'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4.2.0'
+gem 'rails', '~> 6.0.0'
 
-gem 'tzinfo-data'
-
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
-gem 'activeadmin',  github: 'activeadmin'
+gem 'activeadmin'
 gem "devise"
 
 gem "faker"
-gem 'newrelic_rpm', '~> 3.9'
-gem 'hoptoad_notifier', '2.4.11'
+gem 'newrelic_rpm', '~> 6.0'
+
+gem 'country_select'
 
 group :development do
-  gem 'mechanize','2.7.3'
+  gem 'mechanize','2.7.6'
+end
+
+gem 'pg', '~> 1.1'
+
+group :production do
+  gem 'airbrake'
+  gem 'unicorn'
+
+  # Enable gzip compression on heroku, but don't compress images.
+  gem 'heroku-deflater'
+
+  gem 'rack-throttle'
+  gem 'rack-cache'
 end
 
 group :development, :test do
-  gem 'sqlite3'
-  gem 'factory_girl_rails'
-  gem 'rspec-rails', '~> 3.4'
-  gem 'spork', '~> 1.0rc'
+  gem 'factory_bot_rails'
+  gem 'rspec-rails', '~> 4.0'
+  gem 'rubocop', '0.85.1'
+  gem 'rubocop-rails', '~> 2.4'
+  gem 'rubocop-rspec', '~> 1.30'
 end
 
 group :test do
-  gem "shoulda"
   gem "shoulda-matchers"
-  gem "webmock", "~> 1.11.0"
-  gem "webrat"
+  gem "webmock", "~> 3.8.0"
   gem 'simplecov', :require => false
 end
 

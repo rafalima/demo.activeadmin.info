@@ -1,0 +1,24 @@
+---
+
+require:
+  - rubocop-rspec
+  - rubocop-rails
+
+AllCops:
+  DisabledByDefault: true
+
+  TargetRubyVersion: 2.6
+  TargetRailsVersion: 5.2
+
+  Exclude:
+    - vendor/bundle/**/*
+
+  DisplayCopNames: true
+
+  StyleGuideCopsOnly: false
+
+Metrics:
+  Enabled: false
+
+FactoryBot/AttributeDefinedStatically:
+  Enabled: true

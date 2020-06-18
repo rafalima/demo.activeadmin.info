@@ -1,31 +1,5 @@
-<h1>Pré-requistos</h1>
-<ol>
-  <li>Instalar <a target="_BLANK" href="https://github.com/sstephenson/rbenv">Rbenv</a></li>
-  <li>Instalar Ruby
-    <ul>
-      <li>Windows - Instalar Ruby 2.1.7
-        <ul>
-          <li><a target="_BLANK" href="http://rubyinstaller.org/">windows installer</a></li>
-          <li>On Gemfile, comment line "ruby '2.2.0'" and uncomment line "ruby '2.1.7'"
-        </ul>    
-      </li>  
-      <li>Unix - Instalar Ruby 2.2.0
-        <ul><li><a target="_BLANK" href="https://github.com/sstephenson/rbenv#installing-ruby-versions">unix</a></li></ul>
-      </li>
-    </ul>
-  </li>
-  <li>Instalar o <a target="_BLANK" href="http://bundler.io/">bundler</a></li>
-</ol>
-
-<h1>Rodando a aplicação</h1>
-<ol>
-  <li>Baixar o repostitório</li>
-  <li>Executar "bundle install" no root do projeto para instalar todas as dependências definidas no Gemfile</li>
-  <li>Executar "rake db:schema:load" para criar todas as tabelas do banco</li>
-  <li>Executar "rake db:seed" para criar vários dados (produtos e usuários)</li>
-  <li>Executar "rails s" para subir a aplicação.</li>
-  <li>No browser, acessar o seguinte endereço: "http://localhost:3000"</li>
-</ol>
+# The Active Admin Store
+[![Travis CI](https://img.shields.io/travis/activeadmin/activeadmin/master.svg)](https://travis-ci.org/activeadmin/activeadmin)
 
 <hr />
 
@@ -50,3 +24,26 @@
   <li>Execute "rails s" to start the application</li>
   <li>Access "http://localhost:3000"</li>
 </ol>
+OLD
+
+
+
+## Local development setup
+
+Dependencies: Ruby 2.6+ and PostgreSQL
+
+* Clone project using Git
+* Run `bundle install`
+* Configure database:
+  - Create the DB user by running command:
+    ```
+    sudo -u postgres psql -c "CREATE USER demo_aa WITH CREATEDB NOCREATEROLE PASSWORD 'demo_aa'"
+    ```
+  - Export the environment to set the credentials with
+    ```
+    export DATABASE_USERNAME=demo_aa DATABASE_PASSWORD=demo_aa
+    ```
+  - You can use [direnv](https://github.com/direnv/direnv) so that you don't need to export these environment variables every time, or change username/password in `config/database.yml`
+* Run command `bin/rails db:setup` to create database with seed data.
+* Start server: `bin/rails s`
+* Navigate in browser to: http://localhost:3000/admin
